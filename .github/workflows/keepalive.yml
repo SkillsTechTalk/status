@@ -1,0 +1,16 @@
+# GitHub pauses scheduled workflows in a public repo after 60 days without activity.
+# Re-enabling the Uptime workflow once a month keeps the 15-minute checks running.
+name: Keep uptime schedule alive
+on:
+  schedule:
+    - cron: '17 6 1 * *'
+  workflow_dispatch:
+permissions:
+  actions: write
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/uptime.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
