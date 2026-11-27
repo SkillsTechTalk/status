@@ -17,7 +17,7 @@ const CHECKS = [
   { name: 'Skills Tech Talk API ready', url: 'https://api.skillstechtalk.com/ready', json: true },
   { name: 'Skills Tech Talk version check', url: 'https://api.skillstechtalk.com/api/app/version-check', json: VERSION_CHECK },
   { name: 'OpenThunder', url: 'https://openthunder.dev' },
-  { name: 'ThunderLang', url: 'https://thunderlang.com' },
+  { name: 'ThunderLang', url: 'https://thunderlang.dev' }, // thunderlang.com DNS still points at GoDaddy parking; add it back once it points to Vercel,
   { name: 'IntentLang', url: 'https://intentlanguage.dev' },
   { name: 'TuneHabit', url: 'https://tunehabit.com' },
   { name: 'TuneHabit version check', url: 'https://tunehabit.com/api/app/version-check', json: VERSION_CHECK },
